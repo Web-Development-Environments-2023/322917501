@@ -77,12 +77,15 @@ label {
   border-bottom: 2px solid #f0f0f0;
 }
 
+/*
 .tab_container .tab-content p,
 .tab_container .tab-content h3 {
   -webkit-animation: fadeInScale 0.7s ease-in-out;
   -moz-animation: fadeInScale 0.7s ease-in-out;
   animation: fadeInScale 0.7s ease-in-out;
 }
+*/
+
 .tab_container .tab-content h3  {
   text-align: center;
 }
@@ -131,4 +134,18 @@ label .fa {
 }
 .link {
   text-align:center;
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.center_qr{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
