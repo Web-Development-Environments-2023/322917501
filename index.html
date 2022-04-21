@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" type="text/css" href="emojionearea.min.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<script src="emojionearea.min.js"></script>
 </head>
 
 <body>
@@ -33,11 +40,11 @@
 				
 				<img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTgwMjc0NTcwNjIyNjc0Nzk2/gettyimages-1185847058.jpg" id="hp">
 				<p>Arnold Schwarzenegger was born on July 30, 1947, near Graz, Austria. He rose to fame as the world's top bodybuilder, launching a career that would make him a giant 
-					Hollywood star via films like Conan the Barbarian, The Terminator and Total Recall. After years of blockbuster movie roles, Schwarzenegger went into politics, becoming 
+					Hollywood star via films like Conan the Barbarian, The Terminator, and Total Recall. After years of blockbuster movie roles, Schwarzenegger went into politics, becoming 
 					governor of California in 2003. He returned to the big screen after leaving office in 2011, finding success with The Expendables franchise and a return to the Terminator series.</p>
 
 				<b>Early Years</b>		
-				<p>Schwarzenegger's childhood was far from ideal. His father, Gustav, was an alcoholic police chief and one-time member of the Nazi Party, who clearly favored Arnold's 
+				<p>Schwarzenegger's childhood was far from ideal. His father, Gustav, was an alcoholic police chief and one-time member of the Nazi Party, who favored Arnold's 
 					brother over his gangly, seemingly less athletic younger son. Gustav is reported to have beaten and intimidated Schwarzenegger and, when he could, pitted his two boys 
 					against one another. He also ridiculed Schwarzenegger's early dreams of becoming a bodybuilder. "It was a very uptight feeling at home," Schwarzenegger later recalled.
 					So uptight and uncomfortable, in fact, that Schwarzenegger would later refuse to attend the funeral of his father, who died in 1972, or his brother, who was killed in a 
@@ -45,7 +52,7 @@
 
 				<b>Bodybuilding Champion</b>
 				<p>As an escape, Schwarzenegger turned to the movies, in particular those of Reg Park, a bodybuilder and star in B-level Hercules movies. The films also helped propel Schwarzenegger's 
-					own obsession with America, and the future he felt awaited him there. Getting to his new country was the issue. Schwarzenegger found his answer in Joe Weider, the man behind the 
+					obsession with America, and the future he felt awaited him there. Getting to his new country was the issue. Schwarzenegger found his answer in Joe Weider, the man behind the 
 					International Federation of Body Building, an organization that sponsored contests such Mr. Universe and Mr. Olympia. Weider loved Schwarzenegger's bravado, sense of humor, and the 
 					potential he saw in the young bodybuilder. Weider's instincts couldn't have been more dead-on. In all, Schwarzenegger would win an unprecedented four Mr. Universe titles and seven
 					Mr. Olympia crowns during his bodybuilding career. Equally significant, Schwarzenegger, who had immigrated to the United States in 1968, helped propel the sport into the mainstream, 
@@ -73,15 +80,15 @@
 
 			<section id="content2" class="tab-content">
 				<h3>Photos of Arnold</h3>
-				<p></p>
+				<p class="center">in the bodybuilding career:</p>
 				<img src="https://manofmany.com/wp-content/uploads/2019/03/Arnold-Schwarzeneggers-Diet-and-Workout-Plan.jpg" height="75%" class="center">
 		      	<p></p> 
 				<img src="https://www.muscleandfitness.com/wp-content/uploads/2019/05/10-Best-Arms-Olympia-Arnold-Schwarzenegar.jpg?w=1109&quality=86&strip=all" alt="Arnold today" width="50%" class="center">
-				<p></p>
+				<p class="center">as a governor of california:</p>
 				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/A._Schwarzenegger.jpg/1200px-A._Schwarzenegger.jpg" class="center">
 				<p></p>
 				<img src="https://i.pinimg.com/736x/95/3f/60/953f608d0c6eab71312229ad0ec29324.jpg" class="center">
-				<p></p>
+				<p class="center">in the acting career:</p>
 				<img src="https://www.gqmiddleeast.com/2021/06/Arnold_Schwarzenegger_Terminator_GQ-Middle-East.jpg" class="center" width="50%">
 				<p></p>
 				<img src="https://variety.com/wp-content/uploads/2014/10/arnold-schwarzenegger-terminator.jpg?w=681&h=383&crop=1" class="center" width="50%">
@@ -144,11 +151,11 @@
 					</table>
 				</div>
 		      	<p></p>
-				<b>Searh in Web 1.0:</b>
+				<b>Search in Web 1.0:</b>
 				<p></p>
-				<b>Searh in Web 2.0:</b>
+				<b>Search in Web 2.0:</b>
 				<p></p>
-				<b>Searh in Web 3.0:</b>
+				<b>Search in Web 3.0:</b>
 				<p></p>
 			</section>
 
@@ -156,16 +163,26 @@
             <section id="content7" class="tab-content">
 				<h3>Contact Me</h3>
 		      	<p></p>
-				  <form action="mailto:lidoremail5@gmail.com?subject=Feedback about the website" method="post" enctype="text/plain">      
+				  <form method="get">      
 					<input name="name" type="text" class="feedback-input" placeholder="Name" />   
 					<input name="email" type="text" class="feedback-input" placeholder="Email" />
-					<textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-					<select id="emoji" name="emoji" class="feedback-input" placeholder="Emoji">
-						<option value="happy">&#128512;</option>
-						<option value="smile">&#128513;	</option>
-						<option value="wow">&#128563;</option>
-					  </select>
-					<input type="submit" value="Send"/>
+					<textarea id="mytextarea" name="text" class="feedback-input" placeholder="Comment"></textarea>				
+					<script>
+						$(document).ready(function(){
+							$("#mytextarea").emojioneArea({
+								pickerPosition: "bottom"
+							});
+						})
+					</script>
+
+					<script type="text/javascript">
+						function sendMail() {
+							var body = document.getElementById("mytextarea").value;
+    						window.open("mailto:lidoremail5@gmail.com?subject=Feedback about the website&body="+body);
+						}
+					</script>
+
+					<input type="submit" name="value" id="value" value=Send onclick="sendMail()"/>
 				  </form>
 				 
 		      	<p></p>
