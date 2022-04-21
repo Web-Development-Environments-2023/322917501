@@ -135,7 +135,7 @@
 							<tr>
 								<td>Read-Only</td>
 								<td>Read-Write</td>
-								<td>Portable and Personal</td>
+								<td>Read-Write-Execute</td>
 							</tr>
 							<tr>
 								<td>Company Focus</td>
@@ -152,20 +152,23 @@
 				</div>
 		      	<p></p>
 				<b>Search in Web 1.0:</b>
-				<p></p>
+				<p>Need to search for addresses directly. There was a book of domains where you can search for your website and you need to type your domain manually. 
+					The result was based on what you typed and the page itself was read-only, static, and mainly used for company advertising.</p>
 				<b>Search in Web 2.0:</b>
-				<p></p>
+				<p>Query was typed in a search engine. The results were based on popular pages that were suitable for the query. The page itself was a read-write,
+					and most of the time was used for the community.</p>
 				<b>Search in Web 3.0:</b>
-				<p></p>
+				<p>The query can be asked in a variety of ways. The results were more accurate to the query (mainly because of the revolution of the semantic web and AI)
+					and were based on popular pages that were suitable for the query and that fit the most for the person itself. The page was a read-write-execute, and
+					most of the time was used to serve the individual needs.</p>
 			</section>
 
 
             <section id="content7" class="tab-content">
-				<h3>Contact Me</h3>
+				<h3>Send me an Email</h3>
 		      	<p></p>
-				  <form method="get">      
-					<input name="name" type="text" class="feedback-input" placeholder="Name" />   
-					<input name="email" type="text" class="feedback-input" placeholder="Email" />
+				  <form method="get"> 
+					<input id="email" name="email" type="text" class="feedback-input" placeholder="Your Email" />
 					<textarea id="mytextarea" name="text" class="feedback-input" placeholder="Comment"></textarea>				
 					<script>
 						$(document).ready(function(){
@@ -177,8 +180,9 @@
 
 					<script type="text/javascript">
 						function sendMail() {
+							var email = document.getElementById("email").value;
 							var body = document.getElementById("mytextarea").value;
-    						window.open("mailto:lidoremail5@gmail.com?subject=Feedback about the website&body="+body);
+    						window.open("mailto:lidoremail5@gmail.com?subject=Feedback about the website&body=User: "+email+"%0D%0A"+"Comment: "+body);
 						}
 					</script>
 
@@ -193,8 +197,6 @@
 <p class="no_wrap">
 	This site is owned by Lidor Ashtamker
 </p>
-
-
 
 
 </body>
