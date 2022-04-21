@@ -3,5 +3,5 @@
 
 ID: 322917501 <br />
 Full Name: Lidor Ashtamker <br />
-Username: Lidorash <br />
+Git Username: Lidorash <br />
 URL: https://web-development-environments-2022.github.io/322917501/
