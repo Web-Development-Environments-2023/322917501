@@ -34,7 +34,6 @@ a {
   outline: none;
 }
 
-/*Fun begins*/
 .tab_container {
 	width: 90%;
 	margin: 0 auto;
@@ -76,15 +75,6 @@ label {
   border-bottom: 2px solid #f0f0f0;
 }
 
-/*
-.tab_container .tab-content p,
-.tab_container .tab-content h3 {
-  -webkit-animation: fadeInScale 0.7s ease-in-out;
-  -moz-animation: fadeInScale 0.7s ease-in-out;
-  animation: fadeInScale 0.7s ease-in-out;
-}
-*/
-
 .tab_container .tab-content h3  {
   text-align: center;
 }
@@ -103,7 +93,6 @@ label .fa {
   margin: 0 0.4em 0 0;
 }
 
-/*Media query*/
 @media only screen and (max-width: 900px) {
   label span {
     display: none;
@@ -114,7 +103,7 @@ label .fa {
   }
 }
 
-/*Content Animation*/
+
 @keyframes fadeInScale {
   0% {
   	transform: scale(0.9);
